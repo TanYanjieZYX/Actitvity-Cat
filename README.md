@@ -1,4 +1,7 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Activity 浏览活动详情，点赞与参与的客户端
+
+项目很粗糙，实现基本的交互功能和样式
+希望在shopee实习结束完成所有功能、样式，项目结构清晰，Fighting!!!
 
 ## Available Scripts
 
