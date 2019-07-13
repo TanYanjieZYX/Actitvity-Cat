@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 
 import LoginPage from '../containers/Login/LoginPage'
 import EventPage from '../containers/Events/EventPage'
-import DetailPage from '../containers/Details/DetailPage'
+import DetailPage from '../containers/Detail/DetailPage'
 // import requireAuth from '../utils/requireAuth';
 
 export default (
