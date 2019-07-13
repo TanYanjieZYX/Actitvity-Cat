@@ -1,0 +1,8 @@
+/* 字号大小 用在rem单位*/
+$font-size:16px !default;
+
+$designWidth: 320 !default;
+
+@function p2w($px) {
+  @return $px / $designWidth * 100 + vw;
+}

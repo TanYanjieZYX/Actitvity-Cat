@@ -1,71 +1,106 @@
-Activity 浏览活动详情，点赞与参与的客户端
+# 前端 Entry Task 2（React）
+[需求说明](https://docs.google.com/document/d/1CGTXfkHCkfTQkMGVi0yUo6yh1GGpasfjrgzHUJcRDxc/edit#heading=h.gjdgxs)
+[前端设计稿](https://drive.google.com/open?id=1Byvo9t4bVs9DAVLtjzaMeDm2QmRkEDuS)<br>
+[后端项目](https://git.garena.com/jinyang.li/pangolier)<br>
+[后端API设计文档](https://docs.google.com/document/d/1G7M8M5JQzfZjGeHD7mrzDk2-M_NaR8RsBndFxs8DIEw/edit?usp=sharing)<br>
 
-项目很粗糙，实现基本的交互功能和样式
-希望在shopee实习结束完成所有功能、样式，项目结构清晰，Fighting!!!
+### 安装
 
-## Available Scripts
+`npm install`
 
-In the project directory, you can run:
+### 启动
 
-### `npm start`
+`npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 配置跨域
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+```json
+"proxy": "http://localhost:8080/api/v1",
+```
 
-### `npm test`
+### 目录说明
+```
+src
+|____index.scss
+| |____index.js                      入口文件
+| |____common                        公共文件夹
+| | |____components                  存放公共组件
+| | |____const.js                    存放常量
+| | |____utils.js                    存放公共方法
+| |____actions                       存放actions
+| |____api                           存放后端api
+| |____assets                        存放静态资源
+| | |____imgs                        存放图片资源
+| | |____svgs                        存放svg资源
+| | |____common.scss                 公共样式
+| |____pages                         存放页面模块
+| | |____Detail                      详情页
+| | |____List                        列表页
+| | |____Login                       登陆页
+| |____reducers                      存放reducers
+| |____App.js                        根组件
+| |____App.scss
+| |____store                         
+| | |____index.js                    store初始化逻辑
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### store设计
+按页面拆分成authReducer、eventReducer、detailReducer
+```
+|____reducers
+| |____auth.js
+| |____index.js
+| |____channels.js
+| |____details.js
+| |____events.js
+```
+### 公共样式
+1. 根据设计稿定义了全局的color变量
+2. 可复用组件的样式
 
-### `npm run build`
+### color schema
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> color.scss
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+```scss
+$primary: #8560a9;
+$primary-neutral: #67616d;
+$primary-light: #d3c1e5;
+$primary-dark: #453257;
+$background: #faf9fc;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+$complement: #d5ef7f;
+$complement-dark1: #aecb4f;
+$complement-dark2: #788c36;
+$complement-light: #e5f7a9;
 
-### `npm run eject`
+$disabled-text-light: #bababa;
+$disabled-text-dark: #666;
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 设计稿尺寸转换
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+按照设计稿尺寸修改**mixin.scss**中参数，等比例适配设备。
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+使用`p2w()`sass function
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```scss
+.content-wrapper {
+  width: p2w(100px);
+  padding: p2w(10px 16px);
+}
+```
 
-## Learn More
+### 阿里图表库
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`//at.alicdn.com/t/font_1236043_fyxogxyfsav.css`
+第一步：引入项目下面生成的 fontclass 代码：
+`<link rel="stylesheet" href="./iconfont.css">`
+第二步：挑选相应图标并获取类名，应用于页面：
+`<span class="iconfont icon-xxx"></span>`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 无限虚拟滚动
 
-### Code Splitting
+### i18n多国语言
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### 项目截图
