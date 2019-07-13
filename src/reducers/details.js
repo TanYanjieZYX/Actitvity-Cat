@@ -1,4 +1,4 @@
-import { INIT_EVENT_DATA }from '../constants';
+import { INIT_EVENT_DATA } from '../constants'
 
 const defaultState = {
   event: {},
@@ -11,11 +11,10 @@ const initEvent = (state, action) => {
   return {
     ...state,
     event: action.event,
-    joinUsers:action.joinUsers,
-    comments:action.comments,
-    likeUsers:action.likeUsers
+    joinUsers: action.joinUsers,
+    comments: action.comments,
+    likeUsers: action.likeUsers
   }
-
 }
 
 export default (state = defaultState, action) => {

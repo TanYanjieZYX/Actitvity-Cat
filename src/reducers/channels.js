@@ -1,11 +1,12 @@
-import { CHANNELS_FETCHED } from '../constants';
+import { CHANNELS_FETCHED } from '../constants'
 
 const channels = (state = [], action = {}) => {
-  switch(action.type) {
+  switch (action.type) {
     case CHANNELS_FETCHED:
-      return action.channels;
-    default: return state;
+      return action.channels
+    default:
+      return state
   }
 }
 
-export default channels;
+export default channels

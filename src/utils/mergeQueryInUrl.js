@@ -1,11 +1,11 @@
 import URL from 'url'
 import qs from 'qs'
 
-const isEmptyObject = (obj) => {
-  for(var n in obj){
-    return false;
+const isEmptyObject = obj => {
+  for (var n in obj) {
+    return false
   }
-  return true;
+  return true
 }
 
 export const mergeQueryInUrl = (url, query) => {
