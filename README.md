@@ -1,5 +1,5 @@
 # 前端 Entry Task 2（React）
-[需求说明](https://docs.google.com/document/d/1CGTXfkHCkfTQkMGVi0yUo6yh1GGpasfjrgzHUJcRDxc/edit#heading=h.gjdgxs)
+[需求说明](https://docs.google.com/document/d/1CGTXfkHCkfTQkMGVi0yUo6yh1GGpasfjrgzHUJcRDxc/edit#heading=h.gjdgxs)<br>
 [前端设计稿](https://drive.google.com/open?id=1Byvo9t4bVs9DAVLtjzaMeDm2QmRkEDuS)<br>
 [后端项目](https://git.garena.com/jinyang.li/pangolier)<br>
 [后端API设计文档](https://docs.google.com/document/d/1G7M8M5JQzfZjGeHD7mrzDk2-M_NaR8RsBndFxs8DIEw/edit?usp=sharing)<br>
@@ -60,7 +60,7 @@ src
 
 ### color schema
 
-> color.scss
+> _color.scss
 
 ```scss
 $primary: #8560a9;
@@ -77,6 +77,10 @@ $complement-light: #e5f7a9;
 $disabled-text-light: #bababa;
 $disabled-text-dark: #666;
 ```
+### font字体
+SourceSansPro-Semibold
+SourceSansPro-Bold
+SourceSansPro-Regular
 
 ### 设计稿尺寸转换
 
