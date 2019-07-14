@@ -100,9 +100,9 @@ $disabled-text-dark: #666;
 
 ### font 字体
 
-SourceSansPro-Regular:400
-SourceSansPro-Semibold:600
-SourceSansPro-Bold:700
+* SourceSansPro-Regular:400
+* SourceSansPro-Semibold:600
+* SourceSansPro-Bold:700
 
 ### 设计稿尺寸转换
 
