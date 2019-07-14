@@ -18,7 +18,7 @@ import routes from './routes'
 import axios from 'axios'
 import * as serviceWorker from './serviceWorker'
 import { I18nextProvider } from 'react-i18next'
-// import i18n from './i18n'
+import i18n from './i18n'
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger)))
 
 // if (localStorage.Token) {
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 ReactDOM.render(
-  <I18nextProvider>
+  <I18nextProvider i18n={i18n}>
     <Provider store={store}>
       <Router routes={routes}>
         <div>{routes}</div>

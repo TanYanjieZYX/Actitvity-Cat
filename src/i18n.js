@@ -1,5 +1,6 @@
 import i18next from 'i18next'
 import { firstLetterUpper } from './utils/firstLetterUpper'
+
 const env = process.env
 let LANGUAGE = process.env.LANGUAGE
 LANGUAGE = typeof LANGUAGE === 'string' ? JSON.parse(LANGUAGE) : LANGUAGE
@@ -42,6 +43,20 @@ export const tUpperCase = str => {
   return i18next.t(str).toUpperCase()
 }
 
+export const translate = (str, funcName = 'default') => {
+  if (!['tUpper', 'tUpperCase'].includes(funcName)) funcName = 'default'
+  try {
+    return {
+      tUpper: tUpper,
+      tUpperCase: tUpperCase,
+      default: str => i18next.t(str)
+    }[funcName](str)
+  } catch (error) {
+    console.error(error)
+    return str
+  }
+}
+
 export const loadResource = lng => {
   let p
 
@@ -50,10 +65,10 @@ export const loadResource = lng => {
 
     switch (lng) {
       case 'id':
-        p = import('.//i18n/locales/id.json')
+        p = import('../i18n/locales/en.json')
         break
       default:
-        p = import('../i18n/locales/en.json')
+        p = import('../i18n/locales/id.json')
     }
 
     p.then(data => {
