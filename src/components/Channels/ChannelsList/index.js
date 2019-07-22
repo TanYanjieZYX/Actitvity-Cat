@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import ChannelCard from './ChannelCard'
-import './Channel.css'
+import ChannelCard from '../ChannelsCard'
+import './style.scss'
 
 const ChannelsList = ({ channels, selectAll }) => {
   return (

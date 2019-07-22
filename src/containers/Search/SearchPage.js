@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { fetchChannels } from '../../actions/channelActions'
 
-import './SearchPage.css'
+import './style.scss'
 
 import { SEARCH_TIMES, SEARCH_CHANNEL } from '../../constants'
 import moment from 'moment'
-import DatePicker from './DatePicker'
+import DatePicker from '../../components/DatePicker'
 
 class SearchPage extends PureComponent {
   static propTypes = {

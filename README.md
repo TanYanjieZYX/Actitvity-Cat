@@ -44,6 +44,8 @@ src
 | |____IconChange                    三个图标在一起导航条
 | |____ListCard                      活动列表的盒子
 | |____SearchResult                  搜索结果
+| | |____NoResult                    无结果页面
+| | |____ResultBox                   结果搜索页面
 | |____SideSearch                    右滑search条件选择页面
 | |____UserCard                      用户信息的上面用户的详情
 |____constants                    存放常量

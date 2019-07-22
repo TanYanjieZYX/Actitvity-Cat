@@ -1,25 +1,30 @@
 import axios from 'axios'
-import { SET_CURRENT_USER } from '../constants'
+import * as constants from '../constants'
 import baseURL from '../utils/api'
 
-export const setCurrentUser = user => {
-  return {
-    type: SET_CURRENT_USER,
-    user
-  }
-}
+const changeLogin = (token, user) => ({
+  type: constants.CHANGE_LOGIN,
+  token,
+  user
+})
 
 export const logout = () => {
   return dispatch => {
-    sessionStorage.removeItem('Token')
+    sessionStorage.removeItem('token')
   }
 }
 
-export const login = data => {
+export const login = (account, password) => {
   return dispatch => {
-    return axios.post(`${baseURL}/auth/token`, data).then(res => {
-      const token = res.data.token
-      sessionStorage.setItem('Token', token)
-    })
+    axios
+      .post(`${baseURL}/auth/token`, {
+        username: account,
+        password: password
+      })
+      .then(res => {
+        const { token, user } = res.data
+        dispatch(changeLogin(token, user))
+        sessionStorage.setItem('token', token)
+      })
   }
 }

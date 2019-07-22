@@ -19,6 +19,7 @@ import axios from 'axios'
 import * as serviceWorker from './serviceWorker'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
+
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger)))
 
 // if (localStorage.Token) {

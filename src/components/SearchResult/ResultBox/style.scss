@@ -1,34 +1,28 @@
-.search-result {
+@import '../../../scss/function';
+@import '../../../scss/color';
+
+.result-box {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: .68rem;
-  padding: 0 .15rem 0;
-  background: #FAF9FC;
-
-  h4 {
-    font-size: .16rem;
-    color: #8560A9;
+  padding: tounit(14px 15px 11px 27px);
+  background: $background;
+  .result-num {
+    color: $primary;
+    font-size: tounit(16px);
   }
-
-  p {
-    font-size: .12rem;
-    color: #67616D;
-    margin-top: .08rem;
-  }
-
-  button {
+  .clear-search {
     position: absolute;
-    right: .16rem;
-    top: .1rem;
-    padding: 0 .1rem;
-    height: .24rem;
-    border-radius: .24rem;
-    background: #D5EF7F;
-    font-size: .1rem;
-    color: #67616D;
-    text-align: center;
-    line-height: .24rem;
+    display: inline-block;
+    top: tounit(12px);
+    right: tounit(15px);
+    padding: tounit(6px 10px);
+    color: $primary-neutral;
+    font-size: tounit(10px);
+    border-radius: 24px;
+    background: $complement;
+  }
+  .search-type {
+    margin-top: tounit(10px);
+    color: $primary-neutral;
+    font-size: tounit(12px);
   }
 }

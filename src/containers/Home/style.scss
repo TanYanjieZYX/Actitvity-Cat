@@ -1,0 +1,18 @@
+@import '../../scss/function';
+@import '../../scss/color';
+
+.home-wrapper {
+  overflow: hidden;
+}
+.container-wrapper {
+  width: tounit(560px);
+  font-size: 0;
+  .content-wrapper {
+    display: inline-block;
+    width: 100vw;
+    &.is-search {
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}

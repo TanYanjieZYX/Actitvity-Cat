@@ -1,17 +1,16 @@
 import React, { PureComponent } from 'react'
-import moment from 'moment'
+import './style.scss'
 
-class CommentBox extends PureComponent {
+class Comment extends PureComponent {
   render() {
     const { user, comment, create_time } = this.props
-    let time = moment(create_time).fromNow()
     return (
       <div className='comment-wrapper'>
         <img className='comment-user' src={user.avatar} alt=''></img>
         <div className='comment-box-inner'>
           <p className='comment-info'>
             <span className='comment-name'>{user.username}</span>
-            <span className='comment-time'>{time}</span>
+            <span className='comment-time'>{toDateStr(create_time)}</span>
           </p>
           <p className='comment-text'>{comment}</p>
           <span className='iconfont icon-reply'></span>
@@ -21,4 +20,15 @@ class CommentBox extends PureComponent {
   }
 }
 
-export default CommentBox
+const toDateStr = str => {
+  let date = new Date(str).toUTCString().split(' ')
+  let newDateArr = []
+  date.forEach((item, index) => {
+    if (index && index !== 4 && index !== 5) {
+      newDateArr.push(item)
+    }
+  })
+  return newDateArr.join(' ')
+}
+
+export default Comment

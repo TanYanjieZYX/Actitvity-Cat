@@ -1,0 +1,105 @@
+@import '../../scss/function';
+@import '../../scss/color';
+
+.login-wrapper {
+  position: relative;
+  padding-top: p2w(69);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(rgba(133, 96, 169, 0.7), rgba(133, 96, 169, 0.9)),
+    url(../../assets/imgs/Street-Dance-01.jpg) no-repeat top center;
+  background-size: auto p2w(506);
+  .desc {
+    margin-bottom: p2w(16);
+    font-size: p2w(14);
+    text-align: center;
+    color: $complement;
+  }
+  .app-name {
+    margin-bottom: p2w(36);
+    color: $complement;
+    font-size: p2w(20);
+    font-weight: 600;
+    text-align: center;
+  }
+  .logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: p2w(64);
+    height: p2w(64);
+    border: 1px solid $complement;
+    border-radius: 50%;
+    color: $complement;
+    font-size: p2w(50);
+    text-align: center;
+    line-height: p2w(64);
+    .icon-logo-cat{
+      font-size: p2w(48);
+    }
+  }
+  .submit {
+    position: absolute;
+    bottom: p2w(0);
+    width: 100%;
+    height: p2w(64);
+    line-height: p2w(64);
+    text-align: center;
+    font-size: p2w(15);
+    color: $primary-dark;
+    font-weight: 600;
+    background: $complement;
+  }
+  .userinfo {
+    position: absolute;
+    bottom: p2w(119);
+    width: 100vw;
+    padding: 0 p2w(40);
+    box-sizing: border-box;
+  }
+  .input-group {
+    height: p2w(40);
+    padding-top: p2w(8);
+    margin-bottom: p2w(16);
+    border-radius: p2w(40);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    box-sizing: border-box;
+    .icon-user,
+    .icon-password {
+      position: relative;
+      display: inline-block;
+      margin-left: p2w(14);
+      margin-right: p2w(8);
+      color: $primary-light;
+    }
+    .icon-user {
+      bottom: p2w(-1);
+    }
+    .icon-password {
+      bottom: p2w(-1);
+    }
+  }
+  .custom-input {
+    -webkit-appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 4px;
+    border: 0px;
+    box-sizing: border-box;
+    color: $primary-dark;
+    display: inline-block;
+    font-size: p2w(16);
+    height: p2w(20);
+    line-height: p2w(20);
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: #ac8ec9;
+    }
+  }
+  button {
+    :focus {
+      outline: 0;
+    }
+  }
+}

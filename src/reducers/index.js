@@ -1,13 +1,11 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux-immutable'
 
+import home from './home'
 import auth from './auth'
-import events from './events'
-import channels from './channels'
-import details from './details'
+import detail from './detail'
 
 export default combineReducers({
+  home,
   auth,
-  events,
-  channels,
-  details
+  detail
 })

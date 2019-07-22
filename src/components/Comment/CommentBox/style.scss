@@ -1,0 +1,45 @@
+@import '../../../scss/color';
+@import '../../../scss/function';
+
+.comment-wrapper {
+  padding-left: p2w(16);
+  margin-bottom: p2w(16);
+  .comment-user {
+    display: inline-block;
+    width: p2w(32);
+    height: p2w(32);
+    margin-right: p2w(12);
+    border-radius: 50%;
+  }
+  .comment-box-inner {
+    position: relative;
+    display: inline-block;
+    width: p2w(244);
+    vertical-align: top;
+    .comment-info {
+      margin-bottom: p2w(4);
+    }
+    .comment-name {
+      display: inline-block;
+      margin-right: p2w(12);
+      color: $primary;
+      font-size: p2w(12);
+    }
+    .comment-time {
+      color: $disabled-text-light;
+      font-size: p2w(10);
+    }
+    .comment-text {
+      padding-right: p2w(16);
+      color: $disabled-text-dark;
+      font-size: p2w(14);
+    }
+    .icon-reply {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $complement;
+      font-size: p2w(16);
+    }
+  }
+}

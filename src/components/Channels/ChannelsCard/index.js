@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import './style.scss'
 
 class ChannelCard extends PureComponent {
   constructor(props) {

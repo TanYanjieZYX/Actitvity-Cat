@@ -1,15 +1,15 @@
-.search-none {
+@import '../../../scss/function';
+@import '../../../scss/color';
+
+.no-result {
+  padding-top: tounit(120px);
+  color: $disabled-text-dark;
+  font-size: tounit(14px);
   text-align: center;
-
-  i {
+  .icon-no-activity {
     display: block;
-    font-size: .6rem;
-    color: #D3C1E5;
-    margin: 1.2rem 0 .14rem;
-  }
-
-  p {
-    font-size: .14rem;
-    color: #BABABA;
+    margin-bottom: tounit(14px);
+    color: $primary-light;
+    font-size: tounit(60px);
   }
 }

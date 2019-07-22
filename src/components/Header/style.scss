@@ -3,30 +3,30 @@
 
 .header-wrapper {
   position: relative;
-  padding: 0 p2w(14px);
-  height: p2w(40px);
+  padding: 0 p2w(14);
+  height: p2w(40);
   width: 100%;
-  font-size: p2w(24px);
+  font-size: p2w(24);
   text-align: center;
-  line-height: p2w(40px);
+  line-height: p2w(40);
   background: $primary;
   box-sizing: border-box;
-  .shopee-logo-cat {
+  .icon-logo-cat {
     color: $complement;
   }
-  .shopee-search,
-  .shopee-home {
+  .icon-search,
+  .icon-home {
     position: absolute;
-    top: p2w(8px);
-    left: p2w(14px);
+    top: p2w(8);
+    left: p2w(14);
     color: $primary-dark;
   }
   .user-avatar {
     position: absolute;
-    top: p2w(7px);
-    right: p2w(14px);
-    width: p2w(24px);
-    height: p2w(24px);
+    top: p2w(7);
+    right: p2w(14);
+    width: p2w(24);
+    height: p2w(24);
     border-radius: 50%;
   }
 }

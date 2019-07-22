@@ -1,21 +1,25 @@
-import { SET_CURRENT_USER } from '../constants'
-import isEmpty from 'lodash/isEmpty'
+import { fromJS } from 'immutable'
+import * as constants from '../constants'
 
-const initialState = {
-  isAuthenticated: false,
+const defaultState = fromJS({
+  loginStatus: false,
+  token: '',
   user: {}
+})
+
+const changeLogin = (state, action) => {
+  return state.merge({
+    user: action.user,
+    token: action.token,
+    loginStatus: true
+  })
 }
 
-const auth = (state = initialState, action = {}) => {
+export default (state = defaultState, action) => {
   switch (action.type) {
-    case SET_CURRENT_USER:
-      return {
-        isAuthenticated: !isEmpty(action.user),
-        user: action.user
-      }
+    case constants.CHANGE_LOGIN:
+      return changeLogin(state, action)
     default:
       return state
   }
 }
-
-export default auth
