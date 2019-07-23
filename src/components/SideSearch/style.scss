@@ -4,9 +4,9 @@
 .sideSearch {
   position: relative;
   display: inline-block;
-  width: p2w(240);
+  width: tounit(240px);
   height: 100vh;
-  font-size: p2w(12);
+  font-size: tounit(12px);
   vertical-align: top;
   background-color: $primary-dark;
   overflow: hidden;
@@ -15,7 +15,7 @@
     width: 0;
   }
   .search-header {
-    padding: p2w(10) 0;
+    padding: tounit(10px) 0;
     color: #ac8ec9;
     text-align: center;
     &-text {
@@ -24,24 +24,24 @@
         content: '';
         display: block;
         width: 100%;
-        margin-top: p2w(2);
-        border-bottom: p2w(1) solid #ac8ec9;
+        margin-top: tounit(2px);
+        border-bottom: tounit(1px) solid #ac8ec9;
       }
     }
   }
   .search-channel {
-    padding: 0 p2w(16);
+    padding: 0 tounit(16px);
     .channel-item {
       display: inline-block;
-      height: p2w(24);
-      margin-right: p2w(12);
-      margin-bottom: p2w(9);
-      padding: 0 p2w(9);
+      height: tounit(24px);
+      margin-right: tounit(12px);
+      margin-bottom: tounit(9px);
+      padding: 0 tounit(9px);
       color: #fff;
-      line-height: p2w(24);
+      line-height: tounit(24px);
       box-sizing: border-box;
-      border: p2w(1) solid $primary-light;
-      border-radius: p2w(24);
+      border: tounit(1px) solid $primary-light;
+      border-radius: tounit(24px);
       &.is-selected {
         color: $primary-dark;
         background: $complement-light;
@@ -53,18 +53,18 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: p2w(64);
+    height: tounit(64px);
     text-align: center;
     color: $disabled-text-dark;
     font-weight: 600;
-    line-height: p2w(64);
+    line-height: tounit(64px);
     background: $disabled-text-light;
     &.is-selected {
       color: $primary-dark;
       background: $complement-light;
     }
-    .icon-search {
-      margin-right: p2w(6);
+    .shopee-search {
+      margin-right: tounit(6px);
     }
   }
 }

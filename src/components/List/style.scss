@@ -1,97 +1,97 @@
-@import '../../scss/function';
 @import '../../scss/color';
+@import '../../scss/function';
 
 .event-wrapper {
-  padding: p2w(16px);
-  border-bottom: p2w(1px) solid #e8e8e8;
+  padding: tounit(16px);
+  border-bottom: tounit(1px) solid #e8e8e8;
   .event-header {
-    height: p2w(20px);
-    line-height: p2w(20px);
+    height: tounit(20px);
+    line-height: tounit(20px);
     vertical-align: middle;
-    margin-bottom: p2w(8px);
+    margin-bottom: tounit(8px);
   }
   .avatar {
     display: inline-block;
-    width: p2w(20px);
-    height: p2w(20px);
-    margin-right: p2w(8px);
+    width: tounit(20px);
+    height: tounit(20px);
+    margin-right: tounit(8px);
     border-radius: 50%;
   }
   .username {
     position: relative;
     display: inline-block;
-    top: p2w(-5px);
+    top: tounit(-5px);
     color: $primary-neutral;
     font-weight: 600;
   }
   .channel {
     float: right;
-    padding: 0 p2w(10px);
+    padding: 0 tounit(10px);
     color: $primary;
-    border: p2w(1px) solid $primary;
-    border-radius: p2w(20px);
+    border: tounit(1px) solid $primary;
+    border-radius: tounit(20px);
   }
   .username,
   .channel {
-    font-size: p2w(12px);
+    font-size: tounit(12px);
   }
   .event-content {
     position: relative;
-    margin-bottom: p2w(12px);
+    margin-bottom: tounit(12px);
   }
   .event-title {
-    margin-bottom: p2w(8px);
+    margin-bottom: tounit(8px);
     color: $primary-dark;
-    font-size: p2w(16px);
+    font-size: tounit(16px);
     font-weight: 600;
     &.narrow {
-      width: p2w(216px);
+      width: tounit(216px);
     }
   }
   .event-img {
     float: right;
-    margin-left: p2w(4px);
-    width: p2w(64px);
-    height: p2w(64px);
+    margin-left: tounit(4px);
+    width: tounit(64px);
+    height: tounit(64px);
   }
   .event-during {
     display: inline-block;
-    .icon-time::after {
+    .shopee-time::after {
       display: inline-block;
       content: '';
-      width: p2w(2px);
+      width: tounit(2px);
     }
     color: $primary;
-    font-size: p2w(10px);
+    font-size: tounit(10px);
   }
   .event-desc {
     display: -webkit-box;
     /* 处理低版本浏览器不支持css多行省略 */
-    height: p2w(39px);
-    margin-bottom: p2w(12px);
+    height: tounit(39px);
+    margin-bottom: tounit(12px);
     /* autoprefixer: ignore next */
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
     color: #67616d;
-    font-size: p2w(13px);
+    font-size: tounit(13px);
   }
   .event-footer {
-    font-size: p2w(12px);
-    .icon-check-outline,
-    .icon-like-outline {
+    font-size: tounit(12px);
+    .shopee-check-outline,
+    .shopee-like-outline {
       color: #ac8ec9;
     }
-    .icon-check {
+    .shopee-check {
       color: $complement-dark1;
     }
-    .icon-like {
+    .shopee-like {
       color: #fe5c5c;
     }
   }
   .going-status,
   .like-status {
     display: inline-block;
-    margin-right: p2w(30px);
+    margin-right: tounit(30px);
   }
 }

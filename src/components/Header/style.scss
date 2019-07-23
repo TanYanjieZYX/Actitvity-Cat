@@ -1,32 +1,32 @@
-@import '../../scss/color';
 @import '../../scss/function';
+@import '../../scss/color';
 
 .header-wrapper {
   position: relative;
-  padding: 0 p2w(14);
-  height: p2w(40);
+  padding: 0 tounit(14px);
+  height: tounit(40px);
   width: 100%;
-  font-size: p2w(24);
+  font-size: tounit(24px);
   text-align: center;
-  line-height: p2w(40);
+  line-height: tounit(40px);
   background: $primary;
   box-sizing: border-box;
-  .icon-logo-cat {
+  .shopee-logo-cat {
     color: $complement;
   }
-  .icon-search,
-  .icon-home {
+  .shopee-search,
+  .shopee-home {
     position: absolute;
-    top: p2w(8);
-    left: p2w(14);
+    top: tounit(8px);
+    left: tounit(14px);
     color: $primary-dark;
   }
   .user-avatar {
     position: absolute;
-    top: p2w(7);
-    right: p2w(14);
-    width: p2w(24);
-    height: p2w(24);
+    top: tounit(7px);
+    right: tounit(14px);
+    width: tounit(24px);
+    height: tounit(24px);
     border-radius: 50%;
   }
 }

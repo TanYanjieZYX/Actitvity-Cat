@@ -1,45 +1,45 @@
-@import '../../../scss/color';
 @import '../../../scss/function';
+@import '../../../scss/color';
 
 .comment-wrapper {
-  padding-left: p2w(16);
-  margin-bottom: p2w(16);
+  padding-left: tounit(16px);
+  margin-bottom: tounit(16px);
   .comment-user {
     display: inline-block;
-    width: p2w(32);
-    height: p2w(32);
-    margin-right: p2w(12);
+    width: tounit(32px);
+    height: tounit(32px);
+    margin-right: tounit(12px);
     border-radius: 50%;
   }
   .comment-box-inner {
     position: relative;
     display: inline-block;
-    width: p2w(244);
+    width: tounit(244px);
     vertical-align: top;
     .comment-info {
-      margin-bottom: p2w(4);
+      margin-bottom: tounit(4px);
     }
     .comment-name {
       display: inline-block;
-      margin-right: p2w(12);
+      margin-right: tounit(12px);
       color: $primary;
-      font-size: p2w(12);
+      font-size: tounit(12px);
     }
     .comment-time {
       color: $disabled-text-light;
-      font-size: p2w(10);
+      font-size: tounit(10px);
     }
     .comment-text {
-      padding-right: p2w(16);
+      padding-right: tounit(16px);
       color: $disabled-text-dark;
-      font-size: p2w(14);
+      font-size: tounit(14);
     }
-    .icon-reply {
+    .shopee-reply {
       position: absolute;
       top: 0;
       right: 0;
       color: $complement;
-      font-size: p2w(16);
+      font-size: tounit(16px);
     }
   }
 }

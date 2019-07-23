@@ -3,12 +3,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 
-import { composeWithDevTools } from 'redux-devtools-extension'
-import logger from 'redux-logger'
 import rootReducer from './reducers'
 import routes from './routes'
 
@@ -19,8 +17,10 @@ import axios from 'axios'
 import * as serviceWorker from './serviceWorker'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n'
+import '../src/scss/index.scss'
 
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk, logger)))
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 // if (localStorage.Token) {
 //   setAuthorizationToken(localStorage.jwtToken);
