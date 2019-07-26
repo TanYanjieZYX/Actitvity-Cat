@@ -2,10 +2,10 @@ import React from 'react'
 
 import { Route, Switch } from 'react-router-dom'
 
-import Home from '../containers/Home'
-import Login from '../containers/Login'
-import Detail from '../containers/Detail'
-import UserInfo from '../containers/UserInfo'
+import Home from '../containers/Home/index.tsx'
+import Login from '../containers/Login/index.tsx'
+import Detail from '../containers/Detail/index.tsx'
+import UserInfo from '../containers/UserInfo/index.tsx'
 // import requireAuth from '../utils/requireAuth';
 
 export default (

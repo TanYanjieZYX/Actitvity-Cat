@@ -1,4 +1,4 @@
-import { USER_FETCHED, USEREVENTS_FETCHED } from '../constants'
+import { USER_FETCHED, USEREVENTS_FETCHED } from '../constants/index.tsx'
 import baseURL from '../utils/api'
 
 export const userFetched = user => {

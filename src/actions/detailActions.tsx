@@ -1,5 +1,5 @@
 import axios from 'axios'
-import * as constants from '../constants'
+import * as constants from '../constants/index.tsx'
 import baseURL from '../utils/api'
 
 const token = sessionStorage.getItem('token')

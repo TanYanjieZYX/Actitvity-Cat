@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import * as actionCreators from '../../actions/authActions'
+import * as actionCreators from '../../actions/authActions.tsx'
 import './style.scss'
 
 class Login extends PureComponent {

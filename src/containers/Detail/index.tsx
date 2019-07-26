@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import * as actionCreators from '../../actions/detailActions'
-import Header from '../../components/Header'
-import Comment from '../../components/Comment/CommentBox'
+import * as actionCreators from '../../actions/detailActions.tsx'
+import Header from '../../components/Header/index.tsx'
+import Comment from '../../components/Comment/CommentBox/index.tsx'
 import './style.scss'
 
 class Detail extends PureComponent {

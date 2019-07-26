@@ -7,17 +7,17 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 
-import rootReducer from './reducers'
-import routes from './routes'
+import rootReducer from './reducers/index.tsx'
+import routes from './routes/index.tsx'
 
 // import setAuthorizationToken from './utils/setAuthorizationToken';
 // import { setCurrentUser } from './actions/authActions';
 
 import axios from 'axios'
-import * as serviceWorker from './serviceWorker'
+import * as serviceWorker from './serviceWorker.ts'
 import { I18nextProvider } from 'react-i18next'
-import i18n from './i18n'
-import '../src/scss/index.scss'
+import i18n from './i18n.ts'
+import './scss/index.scss'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))

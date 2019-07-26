@@ -1,5 +1,5 @@
 import { fromJS } from 'immutable'
-import * as constants from '../constants'
+import * as constants from '../constants/index.tsx'
 
 const defaultState = fromJS({
   loginStatus: false,
