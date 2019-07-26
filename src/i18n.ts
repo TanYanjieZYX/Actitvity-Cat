@@ -1,5 +1,5 @@
 import i18next from 'i18next'
-import { firstLetterUpper } from './utils/firstLetterUpper'
+import { firstLetterUpper } from './utils/firstLetterUpper.ts'
 
 const env = process.env
 let LANGUAGE = process.env.LANGUAGE

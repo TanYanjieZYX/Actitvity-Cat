@@ -1,0 +1,23 @@
+.show {
+  position: absolute;
+  visibility: visible;
+  z-index: 1;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: red;
+  color: #FFF;
+}
+
+.hide {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: red;
+  color: #FFF;
+}

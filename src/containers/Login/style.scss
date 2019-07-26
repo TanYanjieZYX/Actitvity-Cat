@@ -1,102 +1,110 @@
-@import '../../scss/function';
-@import '../../scss/color';
-
-.login-wrapper {
-  position: relative;
-  padding-top: tounit(69px);
-  width: 100vw;
-  height: 100vh;
+.main {
+  background: linear-gradient(rgba(133,96,169,0.7), rgba(133,96,169,0.9)); /* 标准的语法 */
   box-sizing: border-box;
-  overflow: hidden;
-  background: linear-gradient(rgba(133, 96, 169, 0.7), rgba(133, 96, 169, 0.9)),
-    url(../../assets/imgs/Street-Dance-01.jpg) no-repeat top center;
-  background-size: auto tounit(506);
-  .desc {
-    margin-bottom: tounit(16px);
-    font-size: tounit(14px);
-    text-align: center;
-    color: $complement;
-  }
-  .app-name {
-    margin-bottom: tounit(36);
-    color: $complement;
-    font-size: tounit(20);
-    font-weight: 600;
-    text-align: center;
-  }
-  .logo {
-    margin-left: auto;
-    margin-right: auto;
-    width: tounit(64px);
-    height: tounit(64px);
-    border: 1px solid $complement;
-    border-radius: 50%;
-    color: $complement;
-    font-size: tounit(50px);
-    text-align: center;
-    line-height: tounit(64px);
-  }
-  .submit {
-    position: absolute;
-    bottom: tounit(0);
-    width: 100%;
-    height: tounit(64);
-    line-height: tounit(64);
-    text-align: center;
-    font-size: tounit(15);
-    color: $primary-dark;
-    font-weight: 600;
-    background: $complement;
-  }
-  .userinfo {
-    position: absolute;
-    bottom: tounit(119);
-    width: 100vw;
-    padding: 0 tounit(40px);
-    box-sizing: border-box;
-  }
-  .input-group {
-    height: tounit(40px);
-    padding-top: tounit(8px);
-    margin-bottom: tounit(16px);
-    border-radius: tounit(40px);
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    box-sizing: border-box;
-    .shopee-user,
-    .shopee-password {
-      position: relative;
-      display: inline-block;
-      margin-left: tounit(14px);
-      margin-right: tounit(8px);
-      color: $primary-light;
-    }
-    .shopee-user {
-      bottom: tounit(-1px);
-    }
-    .shopee-password {
-      bottom: tounit(-1px);
-    }
-  }
-  .custom-input {
-    -webkit-appearance: none;
-    background-color: transparent;
-    background-image: none;
-    border-radius: 4px;
-    border: 0px;
-    box-sizing: border-box;
-    color: $primary-dark;
-    display: inline-block;
-    font-size: tounit(16px);
-    height: tounit(20px);
-    line-height: tounit(20px);
-    outline: none;
-    &::-webkit-input-placeholder {
-      color: #ac8ec9;
-    }
-  }
-  button {
-    :focus {
-      outline: 0;
-    }
-  }
+  padding-top: 4rem;
+  height: calc(100vh - 4.6rem);
+  position: relative;
+}
+.bg {
+  background-image: url("../../assets/imgs/Street-Dance-01.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: calc(100vh - 4.6rem);
+}
+.smallTitle {
+  color: #D5EF7F;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.bigTitle {
+  color: #D5EF7F;
+  font-weight: bolder;
+  margin-top: 1.1rem;
+  font-size: 1.7rem;
+  text-align: center;
+}
+.logoContainer {
+  border: 0.1rem #D5EF7F solid;
+  border-radius: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  margin: 2.6rem auto;
+
+}
+.logo {
+  fill: #D5EF7F;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.input {
+  position: absolute;
+  width: 100%;
+  bottom: 1rem;
+}
+.user,
+.password {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+  width: 17.1rem;
+  height: 2.9rem;
+  border: 2px rgba(255,255,255,0.2) solid;
+  border-radius: 1.6rem;
+}
+.user {
+  background-color: rgba(255,255,255,0.2);
+}
+.password {
+  background-color: transparent;
+  margin-top: 1.1rem;
+}
+.user label,
+.password label {
+  height: 1.3rem;
+}
+.user label svg,
+.password label svg {
+  fill: #D3C1E5;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+input {
+  background-color: transparent;
+  border: none;
+  margin-left: 1rem;
+  font-size: 1.1rem;
+  color: #453257;
+}
+#userInput{
+
+}
+#passwordInput{
+  color: #AC8EC9;
+}
+
+.lang {
+  color: #D5EF7F;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+.lang span {
+  padding: 0 0.5rem;
+}
+
+.bottom {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: #453257;
+  height: 4.6rem;
+  line-height: 4.6rem;
+  background-color: #D5EF7F;
+  text-align: center;
 }
