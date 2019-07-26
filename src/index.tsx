@@ -1,7 +1,7 @@
 import './index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom'
+import { Router, Redirect, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
 import { createStore, applyMiddleware } from 'redux'
@@ -18,6 +18,7 @@ import rootSaga from './sagas/index.ts'
 import './scss/index.scss'
 
 import Login from './containers/Login/index.tsx'
+import Main from './containers/Main/index.tsx'
 
 const setRem = () => {
   const html = document.getElementsByTagName('html')[0]
@@ -28,6 +29,17 @@ const setRem = () => {
 
 const sagaMiddleware = createSagaMiddleware()
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)))
+const PrivateRoute = (props: any) => {
+  if (window.location.pathname === '/') {
+    return <Route />
+  }
+  // store中没有token信息,则重定向到首页
+  if (!!store.getState().user.token) {
+    return <Route path={props.path} component={props.component} />
+  } else {
+    return <Redirect to={{ pathname: '/' }} />
+  }
+}
 
 if (process.env.NODE_ENV === 'production') {
   axios.defaults.baseURL = 'https://localhost:8080/'
@@ -39,6 +51,7 @@ ReactDOM.render(
       <Router history={createBrowserHistory()}>
         <div>
           <Route path='/' exact={true} component={Login} />
+          <Route path='/main' component={Main} />
         </div>
       </Router>
     </Provider>

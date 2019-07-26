@@ -2,7 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import * as Redux from 'redux'
 import ErrToast from '../../components/ErrToast/index.tsx'
-import './style.scss'
+import style from './style.scss'
 
 interface IProps {
   login: (username: string, password: string, history: History) => void
@@ -78,27 +78,27 @@ class Login extends React.Component<IProps, IState> {
     return (
       <div>
         <ErrToast msg={this.props.errMsg} show={this.props.errShow} />
-        <div className='bg' />
-        <div className='main'>
-          <p className='smallTitle'>{this.state.lang.small_title}</p>
-          <p className='bigTitle'>{this.state.lang.title}</p>
-          <div className='logoContainer'>
-            <span class='iconfont icon-logo-cat'></span>
+        <div className={style.bg} />
+        <div className={style.main}>
+          <p className={style.smallTitle}>{this.state.lang.small_title}</p>
+          <p className={style.bigTitle}>{this.state.lang.title}</p>
+          <div className={style.logoContainer}>
+            <span className='iconfont icon-logo-cat'></span>
           </div>
-          <div className='input'>
-            <div className='user'>
+          <div className={style.input}>
+            <div className={style.user}>
               <label>
-                <span class='iconfont icon-user'></span>
+                <span className='iconfont icon-user'></span>
               </label>
               <input type='text' ref={node => (this.usr = node)} />
             </div>
-            <div className='password'>
+            <div className={style.password}>
               <label>
-                <span class='iconfont icon-password'></span>
+                <span className='iconfont icon-password'></span>
               </label>
               <input type='password' ref={node => (this.password = node)} />
             </div>
-            <div className='lang'>
+            <div className={style.lang}>
               <div>
                 <span onClick={this.toggleLang}>{this.langArray[this.state.langNum].text}</span>
               </div>
@@ -107,6 +107,7 @@ class Login extends React.Component<IProps, IState> {
               >
                 {this.langArray.map((lang, index) => {
                   if (index === this.state.langNum) {
+                    // eslint-disable-next-line
                     return
                   } else {
                     return (
@@ -120,7 +121,7 @@ class Login extends React.Component<IProps, IState> {
             </div>
           </div>
         </div>
-        <div className='bottom' onClick={this.submit}>
+        <div className={style.bottom} onClick={this.submit}>
           {this.state.lang.sign_in}
         </div>
       </div>

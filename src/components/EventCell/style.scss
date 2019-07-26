@@ -1,0 +1,93 @@
+.main {
+  margin: 1rem 1.5rem 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px #E8E8E8 solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top {
+  font-size: 0.9rem;
+}
+.top img {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 1rem;
+}
+
+.top span {
+  color: #67616D;
+  vertical-align: top;
+  padding-left: 0.7rem;
+}
+
+.channel {
+  float: right;
+  color: #8560A9;
+  padding: 0.1rem 0.6rem;
+  border: 1px #D3C1E5 solid;
+  border-radius: 0.8rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #453257;
+  padding: 0.6rem 0;
+}
+
+.time span{
+  font-size: 0.7rem;
+  color: #8560A9;
+  vertical-align: top;
+}
+
+.time svg {
+  width: 0.9rem;
+  fill: #8560A9;
+}
+
+.description {
+  color: #67616D;
+  margin: 0.9rem 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+
+}
+
+.bottom svg{
+  fill: #AC8EC9;
+  width: 0.9rem;
+  margin-right: 0.4rem;
+}
+
+.bottom span{
+  color: #AC8EC9;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.bottom >span:first-child {
+  margin-right: 2.2rem;
+}
+
+.activeGoing svg {
+  fill:#AECB4F;
+}
+
+.activeGoing span {
+  color: #453257;
+}
+
+.activeLike svg {
+  fill: #FF5C5C;
+}
+
+.activeLike span {
+  color: #453257;
+}
