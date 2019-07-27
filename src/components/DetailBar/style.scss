@@ -1,0 +1,50 @@
+.tabs {
+  height: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px #E8E8E8 solid;
+  border-bottom: 1px #E8E8E8 solid;
+  text-align: center;
+  color: #8C8C8C;
+  background-color: #FFF;
+  font-size: 0.9rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 2;
+}
+a {
+  color: #8C8C8C;
+}
+.tabs >div {
+  height: 1rem;
+  line-height: 1rem;
+  flex: 1;
+}
+
+.tabs svg {
+  width: 1.2rem;
+  vertical-align: text-bottom;
+  margin-right: 0.5rem;
+  fill: #8C8C8C;
+}
+
+.details {
+  border-right: 1px #E8E8E8 solid;
+}
+
+.participants {
+  border-right: 1px #E8E8E8 solid;
+}
+
+.comments {
+
+}
+
+.active a {
+  color: #AECB4F;
+}
+.active svg {
+  fill: #AECB4F;
+}

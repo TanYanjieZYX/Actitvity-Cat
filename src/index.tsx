@@ -19,6 +19,8 @@ import './scss/index.scss'
 
 import Login from './containers/Login/index.tsx'
 import Main from './containers/Main/index.tsx'
+import Detail from './containers/Detail/index.tsx'
+import Me from './containers/Me/index.tsx'
 
 const setRem = () => {
   const html = document.getElementsByTagName('html')[0]
@@ -51,7 +53,9 @@ ReactDOM.render(
       <Router history={createBrowserHistory()}>
         <div>
           <Route path='/' exact={true} component={Login} />
-          <Route path='/main' component={Main} />
+          <Route path='/main/' component={Main} />
+          <Route path='/event/:id' component={Detail} />
+          <Route path='/me/' component={Me} />
         </div>
       </Router>
     </Provider>

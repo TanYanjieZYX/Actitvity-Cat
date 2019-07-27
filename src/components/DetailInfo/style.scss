@@ -1,0 +1,32 @@
+.info {
+  padding: 1.5rem;
+}
+.channel span{
+  color: #8560A9;
+  padding: 0.1rem 0.6rem;
+  border: 1px #D3C1E5 solid;
+  border-radius: 0.8rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #453257;
+  padding: 1rem 0;
+}
+.creator img{
+  float: left;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-right: 0.9rem;
+  border-radius: 2rem;
+}
+
+.creator .name {
+  color: #67616D;
+}
+
+.creator .date {
+  color: #BABABA;
+  font-size: 0.9rem;
+}

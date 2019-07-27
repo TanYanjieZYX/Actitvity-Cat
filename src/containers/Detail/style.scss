@@ -1,0 +1,94 @@
+.main {
+  height: calc(100vh - 4rem - 2.9rem);
+  overflow-y: scroll;
+}
+.bottom_comment,
+.bottom_normal {
+position: fixed;
+width: 100vw;
+height: 4rem;
+line-height: 4rem;
+bottom: 0;
+display: grid;
+text-align: center;
+grid-template-columns: 80% 20%;
+}
+.comment svg {
+width: 1.5rem;
+fill: #D5EF7F;
+}
+.comment {
+background-color: #8560a9;
+display: flex;
+align-items: center;
+padding: 0 1rem;
+}
+.send {
+background-color: #D5EF7F;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.send svg {
+width: 2rem;
+fill: #8560a9;
+}
+.input {
+background-color: #FFF;
+height: 2.3rem;
+flex-grow: 1;
+border-radius: 2rem;
+padding-left: 1rem;
+color: #453257;
+font-size: 1rem;
+}
+.input::-webkit-input-placeholder {
+color: #D3C1E5;
+font-size: 1rem;
+}
+.bottom_normal {
+grid-template-columns: 56% 44%;
+}
+.bottom_normal svg {
+  width: 1.7rem;
+  fill: #453257;
+}
+.purple {
+  background-color: #8560A9;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+.bottom_normal .likes_active {
+  fill: #D5EF7F;
+}
+.join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D5EF7F;
+  color: #788C36;
+}
+.join svg {
+  fill: #788C36;
+  padding-right: 1rem;
+}
+.join_active {
+  color: #8560A9;
+}
+.join_active svg{
+  fill: #8560A9;
+}
+.toast {
+overflow: hidden;
+line-height: 2.3rem;
+text-align: center;
+background-color: rgba(229, 247, 169, 0.8);
+color: #8560A9;
+position: sticky;
+position: -webkit-sticky;
+z-index: 2;
+top: 3.2rem;
+transition: height 0.3s;
+}
