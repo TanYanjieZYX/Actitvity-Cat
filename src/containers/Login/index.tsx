@@ -87,16 +87,24 @@ class Login extends React.Component<IProps, IState> {
           </div>
           <div className={style.input}>
             <div className={style.user}>
-              <label>
-                <span className='iconfont icon-user'></span>
-              </label>
-              <input type='text' ref={node => (this.usr = node)} />
+              <span className='iconfont icon-user'></span>
+              <input
+                type='text'
+                placeholder='Email'
+                name='username'
+                className={style.form_control}
+                ref={node => (this.usr = node)}
+              />
             </div>
             <div className={style.password}>
-              <label>
-                <span className='iconfont icon-password'></span>
-              </label>
-              <input type='password' ref={node => (this.password = node)} />
+              <span className='iconfont icon-password'></span>
+              <input
+                type='password'
+                placeholder='Password'
+                name='password'
+                className={style.form_control}
+                ref={node => (this.password = node)}
+              />
             </div>
             <div className={style.lang}>
               <div>

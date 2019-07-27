@@ -37,10 +37,9 @@
   margin: 2.6rem auto;
 
 }
-.logo {
-  fill: #D5EF7F;
-  width: 3.2rem;
-  height: 3.2rem;
+:global(.icon-logo-cat) {
+  color: #D5EF7F;
+  font-size: 3.2rem;
 }
 .input {
   position: absolute;
@@ -52,29 +51,38 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  padding: 0 1rem;
-  width: 17.1rem;
-  height: 2.9rem;
-  border: 2px rgba(255,255,255,0.2) solid;
-  border-radius: 1.6rem;
-}
-.user {
-  background-color: rgba(255,255,255,0.2);
-}
-.password {
   background-color: transparent;
+  input:focus{
+    background-color:rgba(255, 255, 255, 0.2);
+  }
+}
+
+.password {
   margin-top: 1.1rem;
 }
-.user label,
-.password label {
-  height: 1.3rem;
+.form_control {
+  outline: none;
+  background-color: transparent;
+  width: 17.1rem;
+  height: 2.9rem;
+  padding: 0 1rem;
+  border: 2px rgba(255,255,255,0.2) solid;
+  border-radius: 1.6rem;
+  padding-left: 3rem;
 }
-.user label svg,
-.password label svg {
-  fill: #D3C1E5;
-  width: 1.3rem;
-  height: 1.3rem;
+:global(.icon-user),
+:global(.icon-password) {
+  color: #D3C1E5;
+  font-size: 1.3rem;
+  position: absolute;
+  margin-left: 2rem;
 }
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color: rgba(172, 142, 201, 1);
+  font-size: 1rem;
+  font-weight: 400;  
+}
+
 input {
   background-color: transparent;
   border: none;

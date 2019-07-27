@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    // "allowJs": true,
+    // "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    // "moduleResolution": "node",
+    // "isolatedModules": true,
+    "module": "commonjs",
+    "jsx": "react",
+    "target": "es5",
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "lib": ["es6", "dom", "es2017"],
+    "baseUrl": ".",
+    "paths": {
+      "@act/*": [ "src/actions/*" ],
+      "@api/*": ["./src/api/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@imgs/*": ["./src/assets/imgs/*"],
+      "@comp/*": [ "src/components/*" ],
+      "@container/*": [ "src/containers/*" ],
+      "@lang/*": ["src/lang/*"],
+      "@reducer/*": [ "src/reducers/*" ],
+      "@sagas/*": ["./src/sagas/*"],
+      "@scss/*": [ "src/scss/*" ],
+      "@utils/*": [ "src/utils/*" ],
+      "@src/*": [ "src/*" ]
+    },
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
