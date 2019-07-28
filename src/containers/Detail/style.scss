@@ -15,7 +15,7 @@ grid-template-columns: 80% 20%;
 }
 .comment svg {
 width: 1.5rem;
-fill: #D5EF7F;
+fill: $complement;
 }
 .comment {
 background-color: #8560a9;
@@ -24,7 +24,7 @@ align-items: center;
 padding: 0 1rem;
 }
 .send {
-background-color: #D5EF7F;
+background-color: $complement;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -39,7 +39,7 @@ height: 2.3rem;
 flex-grow: 1;
 border-radius: 2rem;
 padding-left: 1rem;
-color: #453257;
+color: $primary-dark;
 font-size: 1rem;
 }
 .input::-webkit-input-placeholder {
@@ -51,7 +51,7 @@ grid-template-columns: 56% 44%;
 }
 .bottom_normal svg {
   width: 1.7rem;
-  fill: #453257;
+  fill: $primary-dark;
 }
 .purple {
   background-color: #8560A9;
@@ -61,13 +61,13 @@ grid-template-columns: 56% 44%;
   padding: 0 1rem;
 }
 .bottom_normal .likes_active {
-  fill: #D5EF7F;
+  fill: $complement;
 }
 .join {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #D5EF7F;
+  background-color: $complement;
   color: #788C36;
 }
 .join svg {

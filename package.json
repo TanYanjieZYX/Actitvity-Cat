@@ -121,6 +121,7 @@
     "eslint-plugin-typescript": "^0.14.0",
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
+    "sass-resources-loader": "^2.0.1",
     "standard": "^13.0.2",
     "typescript": "^3.5.3",
     "typescript-eslint-parser": "^22.0.0"

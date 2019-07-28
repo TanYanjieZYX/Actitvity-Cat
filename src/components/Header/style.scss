@@ -23,15 +23,20 @@
 .left svg {
   width: 1.5rem;
   height: 1.5rem;
-  fill: #453257;
+  fill: $primary-dark;
 }
 .center {
   height: 1.7rem;
+  :global(.icon-logo-cat) {
+    color: $complement;
+    font-size: 1.5rem;
+  }
 }
+
 .center svg {
   width: 1.7rem;
   height: 1.7rem;
-  fill: #D5EF7F;
+  fill: $complement;
 }
 .right {
   height: 1.7rem;

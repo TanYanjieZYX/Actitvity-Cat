@@ -63,6 +63,8 @@ class Login extends React.Component<IProps, IState> {
       lang_show: !this.state.lang_show
     })
   }
+  // import { changeLanguage } from '@src/i18n'
+  // changeLanguage('id')
   public changeLang = (id: number) => {
     this.setState({
       langNum: id,
@@ -92,7 +94,7 @@ class Login extends React.Component<IProps, IState> {
                 type='text'
                 placeholder='Email'
                 name='username'
-                className={style.form_control}
+                className={style.form}
                 ref={node => (this.usr = node)}
               />
             </div>
@@ -102,7 +104,7 @@ class Login extends React.Component<IProps, IState> {
                 type='password'
                 placeholder='Password'
                 name='password'
-                className={style.form_control}
+                className={style.form}
                 ref={node => (this.password = node)}
               />
             </div>

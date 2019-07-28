@@ -33,8 +33,8 @@ a {
 
 .title {
   font-size: 1.3rem;
-  font-weight: bold;
-  color: #453257;
+  font-weight: $semibold;
+  color: $primary-dark;
   padding: 0.6rem 0;
 }
 
@@ -81,7 +81,7 @@ a {
 }
 
 .activeGoing span {
-  color: #453257;
+  color: $primary-dark;
 }
 
 .activeLike svg {
@@ -89,5 +89,5 @@ a {
 }
 
 .activeLike span {
-  color: #453257;
+  color: $primary-dark;
 }

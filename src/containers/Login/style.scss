@@ -16,31 +16,31 @@
   height: calc(100vh - 4.6rem);
 }
 .smallTitle {
-  color: #D5EF7F;
-  font-weight: bold;
+  color: $complement;
+  font-weight: $semibold;
   font-size: 1.1rem;
   text-align: center;
 }
 .bigTitle {
-  color: #D5EF7F;
-  font-weight: bolder;
+  color: $complement;
+  font-weight: $semibold;
   margin-top: 1.1rem;
   font-size: 1.7rem;
   text-align: center;
 }
 .logoContainer {
-  border: 0.1rem #D5EF7F solid;
+  border: 0.1rem $complement solid;
   border-radius: 5rem;
   width: 3.5rem;
   height: 3.5rem;
   padding: 0.5rem;
   margin: 2.6rem auto;
+  :global(.icon-logo-cat) {
+    color: $complement;
+    font-size: 3.2rem;
+  }
+}
 
-}
-:global(.icon-logo-cat) {
-  color: #D5EF7F;
-  font-size: 3.2rem;
-}
 .input {
   position: absolute;
   width: 100%;
@@ -60,7 +60,7 @@
 .password {
   margin-top: 1.1rem;
 }
-.form_control {
+.form {
   outline: none;
   background-color: transparent;
   width: 17.1rem;
@@ -72,15 +72,15 @@
 }
 :global(.icon-user),
 :global(.icon-password) {
-  color: #D3C1E5;
+  color: $primary-light;
   font-size: 1.3rem;
   position: absolute;
   margin-left: 2rem;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-  color: rgba(172, 142, 201, 1);
+  color: $primary-light;
   font-size: 1rem;
-  font-weight: 400;  
+  font-weight: $regular;  
 }
 
 input {
@@ -88,7 +88,7 @@ input {
   border: none;
   margin-left: 1rem;
   font-size: 1.1rem;
-  color: #453257;
+  color: $primary-dark;
 }
 #userInput{
 
@@ -98,7 +98,7 @@ input {
 }
 
 .lang {
-  color: #D5EF7F;
+  color: $complement;
   text-align: center;
   text-decoration: underline;
   margin-top: 1rem;
@@ -109,10 +109,10 @@ input {
 
 .bottom {
   font-size: 1.1rem;
-  font-weight: bolder;
-  color: #453257;
+  font-weight: $semibold;
+  color: $primary-dark;
   height: 4.6rem;
   line-height: 4.6rem;
-  background-color: #D5EF7F;
+  background-color: $complement;
   text-align: center;
 }

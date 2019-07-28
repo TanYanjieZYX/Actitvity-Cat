@@ -43,8 +43,8 @@
   font-size: 0.7rem;
   line-height: 0.7rem;
   color: #67616D;
-  background-color: #d5ef7f;
-  font-weight: bold;
+  background-color: $complement;
+  font-weight: $semibold;
 }
 
 .when {
@@ -60,13 +60,13 @@
 
 .when svg {
   width: 1.5rem;
-  fill: #D5EF7F;
+  fill: $complement;
 }
 .when_title,
 .where_title{
   padding-left: 2.5vw;
   font-size: 5vw;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 6.25vw;
   color: #8560a9;
   position: relative;
@@ -108,8 +108,8 @@
 }
 
 .where_location {
-  color: #453257;
-  font-weight: bold;
+  color: $primary-dark;
+  font-weight: $semibold;
   margin-top: 0.7rem;
 }
 .where_detail {
