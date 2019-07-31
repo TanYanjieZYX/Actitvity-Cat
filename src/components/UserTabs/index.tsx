@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { getUser } from '../../api/index.ts'
-import UserEventList from '../UserEventList/index.tsx'
+import { getUser } from '@api/index.ts'
+import UserEventList from '@comp/UserEventList/index.tsx'
 import style from './style.scss'
 import cn from 'classnames'
 

@@ -10,13 +10,13 @@ import {
   postComment,
   postGoing,
   postLikes
-} from '../../api/index.ts'
-import DetailBar from '../../components/DetailBar/index.tsx'
-import DetailComment from '../../components/DetailComment/index.tsx'
-import DetailDescription from '../../components/DetailDescription/index.tsx'
-import DetailInfo from '../../components/DetailInfo/index.tsx'
-import DetailParticipants from '../../components/DetailParticipants/index.tsx'
-import Header from '../../components/Header/index.tsx'
+} from '@api/index.ts'
+import DetailBar from '@comp/DetailBar/index.tsx'
+import DetailComment from '@comp/DetailComment/index.tsx'
+import DetailDescription from '@comp/DetailDescription/index.tsx'
+import DetailInfo from '@comp/DetailInfo/index.tsx'
+import DetailParticipants from '@comp/DetailParticipants/index.tsx'
+import Header from '@comp/Header/index.tsx'
 import style from './style.scss'
 import cn from 'classnames'
 

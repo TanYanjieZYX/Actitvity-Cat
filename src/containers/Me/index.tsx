@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import Header from '../../components/Header/index.tsx'
-import UserInfo from '../../components/UserInfo/index.tsx'
-import UserTabs from '../../components/UserTabs/index.tsx'
+import Header from '@comp/Header/index.tsx'
+import UserInfo from '@comp/UserInfo/index.tsx'
+import UserTabs from '@comp/UserTabs/index.tsx'
 
 interface IUser {
   avatar: string

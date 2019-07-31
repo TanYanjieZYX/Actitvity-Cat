@@ -1,5 +1,6 @@
 import { all, call, put, takeLatest, delay } from 'redux-saga/effects'
-import { addResultEvents, getAllEvents, getChannels, getEvents, login } from '../api/index.ts'
+import { addResultEvents, getAllEvents, getChannels, getEvents, login } from '@api/index.ts'
+import { setCookie } from '@utils/setCookie.ts'
 
 function* loginAsync(action: { username: string; password: string; type: string; history: any }) {
   const json = yield call(login, action.username, action.password)
@@ -9,6 +10,7 @@ function* loginAsync(action: { username: string; password: string; type: string;
     yield put({ type: 'HIDE_ERROR' })
   } else {
     yield put({ type: 'LOGIN', data: json })
+    setCookie('USER_TOKEN', json.token)
     action.history.push('/main')
   }
 }

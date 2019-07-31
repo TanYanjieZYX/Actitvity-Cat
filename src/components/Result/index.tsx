@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import * as Redux from 'redux'
-import { clearSearch, showAllEvents } from '../../actions/index.ts'
+import { clearSearch, showAllEvents } from '@act/index.ts'
 import style from './style.scss'
 
 interface IProps {

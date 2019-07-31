@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-import { getEventByType } from '../../api/index.ts'
-import EventCell from '../../components/EventCell/index.tsx'
-import style from '../UserTabs/style.scss'
+import { getEventByType } from '@api/index.ts'
+import EventCell from '@comp/EventCell/index.tsx'
+import style from '@comp/UserTabs/style.scss'
 
 interface IProps {
   type: number

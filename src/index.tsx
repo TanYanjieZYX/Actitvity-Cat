@@ -13,15 +13,15 @@ import axios from 'axios'
 import * as serviceWorker from './serviceWorker.ts'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n.ts'
-import rootReducer from './reducers/index.ts'
-import rootSaga from './sagas/index.ts'
+import rootReducer from '@reducer/index.ts'
+import rootSaga from '@sagas/index.ts'
 import './scss/index.scss'
 
-import Login from './containers/Login/index.tsx'
-import Main from './containers/Main/index.tsx'
-import Detail from './containers/Detail/index.tsx'
-import Me from './containers/Me/index.tsx'
-
+import Login from '@container/Login/index.tsx'
+import Main from '@container/Main/index.tsx'
+import Detail from '@container/Detail/index.tsx'
+import Me from '@container/Me/index.tsx'
+import NotFound from '@container/Error/index.tsx'
 const setRem = () => {
   const html = document.getElementsByTagName('html')[0]
   const width = html.getBoundingClientRect().width
@@ -56,6 +56,7 @@ ReactDOM.render(
           <Route path='/main/' component={Main} />
           <Route path='/event/:id' component={Detail} />
           <Route path='/me/' component={Me} />
+          <Route path='*' component={NotFound}></Route>
         </div>
       </Router>
     </Provider>

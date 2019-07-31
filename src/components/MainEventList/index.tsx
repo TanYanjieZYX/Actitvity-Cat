@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import * as Redux from 'redux'
-import EventCell from '../EventCell/index.tsx'
+import EventCell from '@comp/EventCell/index.tsx'
 import style from './style.scss'
 
 interface IProps {

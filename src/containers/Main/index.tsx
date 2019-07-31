@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import * as Redux from 'redux'
-import { toggleSearch } from '../../actions/index.ts'
-import Header from '../../components/Header/index.tsx'
-import MainEventList from '../../components/MainEventList/index.tsx'
-import Result from '../../components/Result/index.tsx'
-import Search from '../../components/Search/index.tsx'
+import { toggleSearch } from '@act/index.ts'
+import Header from '@comp/Header/index.tsx'
+import MainEventList from '@comp/MainEventList/index.tsx'
+import Result from '@comp/Result/index.tsx'
+import Search from '@comp/Search/index.tsx'
 import style from './style.scss'
 
 interface IUser {
