@@ -1,3 +1,5 @@
+import { TOGGLE_SEARCH, GET_CHANNELS, FINISH_SEARCH, CLEAR_SEARCH } from '@act/index.ts'
+
 interface IAction {
   type: string
   channels?: any[]
@@ -9,17 +11,17 @@ const searchReducer = (
   action: IAction
 ) => {
   switch (action.type) {
-    case 'TOGGLE_SEARCH':
+    case TOGGLE_SEARCH:
       return {
         ...state,
         show: !state.show
       }
-    case 'GET_CHANNELS':
+    case GET_CHANNELS:
       return {
         ...state,
         channels: action.channels
       }
-    case 'FINISH_SEARCH':
+    case FINISH_SEARCH:
       return {
         ...state,
         show: false,
@@ -27,7 +29,7 @@ const searchReducer = (
         text: action.text,
         params: action.params
       }
-    case 'CLEAR_SEARCH':
+    case CLEAR_SEARCH:
       return {
         ...state,
         show: false,

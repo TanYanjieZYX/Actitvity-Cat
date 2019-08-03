@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom'
 import { Router, Redirect, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { composeWithDevTools } from 'redux-devtools-extension'
 import { Provider } from 'react-redux'
 
 import axios from 'axios'
@@ -30,7 +29,9 @@ const setRem = () => {
 }
 
 const sagaMiddleware = createSagaMiddleware()
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)))
+//redux-devtools-extension
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)))
 const PrivateRoute = (props: any) => {
   if (window.location.pathname === '/') {
     return <Route />

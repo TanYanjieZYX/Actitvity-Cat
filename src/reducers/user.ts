@@ -1,3 +1,5 @@
+import { LOGIN } from '@act/index.ts'
+
 interface IData {
   token: string
   user: object
@@ -8,7 +10,7 @@ interface IAction {
 }
 const userReducer = (state = {}, action: IAction) => {
   switch (action.type) {
-    case 'LOGIN':
+    case LOGIN:
       return {
         user: action.data.user,
         token: action.data.token
