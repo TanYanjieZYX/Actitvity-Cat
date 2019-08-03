@@ -1,9 +1,10 @@
 import './index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Redirect, Route } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
+import logger from 'redux-logger'
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { Provider } from 'react-redux'
@@ -21,6 +22,7 @@ import Main from '@container/Main/index.tsx'
 import Detail from '@container/Detail/index.tsx'
 import Me from '@container/Me/index.tsx'
 import NotFound from '@container/Error/index.tsx'
+import PrivateRoute from '@utils/privateRoute.tsx'
 const setRem = () => {
   const html = document.getElementsByTagName('html')[0]
   const width = html.getBoundingClientRect().width
@@ -31,18 +33,7 @@ const setRem = () => {
 const sagaMiddleware = createSagaMiddleware()
 //redux-devtools-extension
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)))
-const PrivateRoute = (props: any) => {
-  if (window.location.pathname === '/') {
-    return <Route />
-  }
-  // store中没有token信息,则重定向到首页
-  if (!!store.getState().user.token) {
-    return <Route path={props.path} component={props.component} />
-  } else {
-    return <Redirect to={{ pathname: '/' }} />
-  }
-}
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware, logger)))
 
 if (process.env.NODE_ENV === 'production') {
   axios.defaults.baseURL = 'https://localhost:8080/'
@@ -54,9 +45,9 @@ ReactDOM.render(
       <Router history={createBrowserHistory()}>
         <div>
           <Route path='/' exact={true} component={Login} />
-          <Route path='/main/' component={Main} />
-          <Route path='/event/:id' component={Detail} />
-          <Route path='/me/' component={Me} />
+          <PrivateRoute path='/main/' component={Main} />
+          <PrivateRoute path='/event/:id' component={Detail} />
+          <PrivateRoute path='/me/' component={Me} />
           <Route path='*' component={NotFound}></Route>
         </div>
       </Router>
