@@ -1,7 +1,7 @@
 import './index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router, Route } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 
 import logger from 'redux-logger'
@@ -43,13 +43,13 @@ ReactDOM.render(
   <I18nextProvider i18n={i18n}>
     <Provider store={store}>
       <Router history={createBrowserHistory()}>
-        <div>
-          <Route path='/' exact={true} component={Login} />
+        <Switch>
+          <Route path='/' exact component={Login} />
           <PrivateRoute path='/main/' component={Main} />
           <PrivateRoute path='/event/:id' component={Detail} />
           <PrivateRoute path='/me/' component={Me} />
-          <Route path='*' component={NotFound}></Route>
-        </div>
+          <Route component={NotFound} />
+        </Switch>
       </Router>
     </Provider>
   </I18nextProvider>,

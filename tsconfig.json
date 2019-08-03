@@ -13,18 +13,18 @@
     "lib": ["es6", "dom", "es2017"],
     "baseUrl": ".",
     "paths": {
-      "@act/*": [ "src/actions/*" ],
+      "@act/*": ["src/actions/*"],
       "@api/*": ["./src/api/*"],
       "@assets/*": ["./src/assets/*"],
       "@imgs/*": ["./src/assets/imgs/*"],
-      "@comp/*": [ "src/components/*" ],
-      "@container/*": [ "src/containers/*" ],
+      "@comp/*": ["src/components/*"],
+      "@container/*": ["src/containers/*"],
       "@lang/*": ["src/lang/*"],
-      "@reducer/*": [ "src/reducers/*" ],
+      "@reducer/*": ["src/reducers/*"],
       "@sagas/*": ["./src/sagas/*"],
-      "@scss/*": [ "src/scss/*" ],
-      "@utils/*": [ "src/utils/*" ],
-      "@src/*": [ "src/*" ]
+      "@scss/*": ["src/scss/*"],
+      "@utils/*": ["src/utils/*"],
+      "@src/*": ["src/*"]
     },
   },
   "include": [
