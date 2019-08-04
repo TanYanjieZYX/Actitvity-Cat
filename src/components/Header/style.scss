@@ -19,12 +19,12 @@
 
 .left {
   height: 1.5rem;
+  :global(.iconfont){
+    font-size: 1.5rem;
+    color: $primary-dark;
+  }
 }
-.left svg {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: $primary-dark;
-}
+
 .center {
   height: 1.7rem;
   :global(.icon-logo-cat) {
@@ -33,11 +33,6 @@
   }
 }
 
-.center svg {
-  width: 1.7rem;
-  height: 1.7rem;
-  fill: $complement;
-}
 .right {
   height: 1.7rem;
 }

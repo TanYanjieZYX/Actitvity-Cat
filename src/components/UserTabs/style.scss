@@ -51,8 +51,7 @@
 
 .active {
   color: $complement-dark1;
-}
-
-.active svg {
-  fill: $complement-dark1;
+  :global(.iconfont) {
+    color: $complement-dark1;
+  }
 }
