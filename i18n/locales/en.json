@@ -26,5 +26,6 @@
   "where": "where",
   "join": "join",
   "toast": "I am a toast :) Slide down & slide up",
-  "past": "past"
+  "past": "past",
+  "error.load_products_failed": "Oops! We are unable to load the products at the moment. :-( Please try again later."
 }

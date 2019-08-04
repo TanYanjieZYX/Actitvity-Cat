@@ -23,17 +23,19 @@
 }
 
 .description {
-  color: #67616D;
+  color: $primary-neutral;
   position: relative;
   margin-bottom: 1rem;
 }
+
 .expend_cover {
   height: 4rem;
   width: 100%;
   bottom: 0;
   position: absolute;
-  background: linear-gradient(rgba(250,249,252,0),rgba(250,249,252,.7),#fff);
+  background: linear-gradient(rgba(250, 249, 252, 0), rgba(250, 249, 252, .7), $white);
 }
+
 .expend_button {
   position: absolute;
   padding: 0.5rem 0.8rem;
@@ -42,35 +44,42 @@
   border-radius: 1rem;
   font-size: 0.7rem;
   line-height: 0.7rem;
-  color: #67616D;
+  color: $primary-neutral;
   background-color: $complement;
   font-weight: $semibold;
 }
 
 .when {
   padding: 1.5rem 0;
-  border-top: #E8E8E8 1px solid;
-  border-bottom: #E8E8E8 1px solid;
+  border-top: $border-light 1px solid;
+  border-bottom: $border-light 1px solid;
+
+  :global(.iconfont) {
+    font-size: 1.5rem;
+    color: $complement;
+  }
 }
 
 .where {
   padding: 1.5rem 0;
-  border-bottom: #E8E8E8 1px solid;
+  border-bottom: $border-light 1px solid;
 }
 
 .when svg {
   width: 1.5rem;
   fill: $complement;
 }
+
 .when_title,
-.where_title{
+.where_title {
   padding-left: 2.5vw;
   font-size: 5vw;
   font-weight: $bold;
   line-height: 6.25vw;
-  color: #8560a9;
+  color: $primary;
   position: relative;
 }
+
 .when_title:before,
 .where_title:before {
   position: absolute;
@@ -79,29 +88,35 @@
   width: 0.3rem;
   height: 1.5rem;
   border-radius: 3px;
-  background-color: #8560a9;
+  background-color: $primary;
   content: "";
 }
+
 .when_detail {
   margin-top: 1rem;
 }
-.date{
+
+.date {
   display: inline-block;
   width: 50%;
   box-sizing: border-box;
   text-align: center;
 }
+
 .date:first-child {
-  border-right: #E8E8E8 1px solid;
+  border-right: $border-light 1px solid;
 }
-.date >span {
-  color:#67616D;
+
+.date>span {
+  color: $primary-neutral;
   vertical-align: top;
   padding-left: 0.3rem;
 }
+
 .time {
-  color: #AECB4F;
+  color: $complement-dark1;
 }
+
 .time span:first-child {
   font-size: 2.3rem;
   padding-right: 0.5rem;
@@ -112,13 +127,14 @@
   font-weight: $semibold;
   margin-top: 0.7rem;
 }
+
 .where_detail {
-  color: #67616D;
+  color: $primary-neutral;
 }
+
 .where img {
   height: 7.3rem;
   width: 100%;
   border-radius: 0.6rem;
   margin-top: 1rem;
 }
-

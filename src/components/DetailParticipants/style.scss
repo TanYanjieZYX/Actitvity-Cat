@@ -1,21 +1,25 @@
 .main {
   padding: 0 1.5rem;
 }
+
 .going,
 .likes {
   display: grid;
   grid-template-columns: 30% 70%;
-  border-bottom: #E8E8E8 1px solid;
-  padding-top:1rem;
+  border-bottom: $border-light 1px solid;
+  padding-top: 1rem;
 }
+
 .left {
-  color: #AC8EC9;
+  color: $primary-medium;
+
+  :global(.iconfont) {
+    color: $primary-medium;
+    font-size: 0.9rem;
+  }
 }
-.left svg {
-  fill: #AC8EC9;
-  width: 0.9rem;
-}
-.right img{
+
+.right img {
   width: 1.7rem;
   height: 1.7rem;
   border-radius: 1rem;

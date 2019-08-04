@@ -23,7 +23,7 @@
 }
 .bigTitle {
   color: $complement;
-  font-weight: $semibold;
+  font-weight: $bold;
   margin-top: 1.1rem;
   font-size: 1.7rem;
   text-align: center;
@@ -60,6 +60,7 @@
 .password {
   margin-top: 1.1rem;
 }
+
 .form {
   outline: none;
   background-color: transparent;
@@ -94,7 +95,7 @@ input {
 
 }
 #passwordInput{
-  color: #AC8EC9;
+  color: $primary-medium;
 }
 
 .lang {
@@ -102,6 +103,7 @@ input {
   text-align: center;
   text-decoration: underline;
   margin-top: 1rem;
+  text-decoration:none;
 }
 .lang span {
   padding: 0 0.5rem;

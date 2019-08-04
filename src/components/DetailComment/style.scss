@@ -18,22 +18,23 @@
 }
 .reply {
   text-align: right;
+  :global(.icon-reply){
+    color: $complement;
+    font-size: 1.5rem;
+  }
 }
-.reply svg {
-  fill: $complement;
-  width: 1.5rem;
-}
+
 .username {
-  color:#8560A9;
+  color:$primary;
   font-size: 0.9rem;
 }
 
 .time {
-  color: #BABABA;
+  color: $disabled-text-light;
   font-size: 0.7rem;
   padding-left: 1rem;
 }
 .text {
-  color: #67616D;
+  color: $primary-neutral;
   margin-top: 0.3rem;
 }

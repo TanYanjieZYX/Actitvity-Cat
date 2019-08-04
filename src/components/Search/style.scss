@@ -7,7 +7,7 @@
 }
 
 .date,
-.channel{
+.channel {
   text-align: center;
   margin-top: 0.7rem;
 }
@@ -16,15 +16,15 @@
   margin-bottom: 2rem;
 }
 
-.date >span,
-.channel >span{
-  color: #AC8EC9;
+.date>span,
+.channel>span {
+  color: $primary-medium;
   font-size: 0.9rem;
-  border-bottom: 1px #AC8EC9 solid;
+  border-bottom: 1px $primary-medium solid;
 }
 
-.date >div,
-.channel >div {
+.date>div,
+.channel>div {
   text-align: left;
   margin: 1rem;
 }
@@ -47,36 +47,38 @@
   font-weight: $semibold;
   vertical-align: top;
   padding-left: 0.5rem;
-}
 
-.button svg {
-  width: 1.3rem;
+  :global(.icon-search) {
+    font-size: 1.3rem;
+  }
 }
 
 .disabled {
-  background-color: #BABABA;
+  background-color: $disabled-text-light;
+
+  :global(.icon-search) {
+    color: $disabled-text-dark;
+  }
 }
+
 .disabled span {
-  color:#666666;
-}
-.disabled svg {
-  fill: #666666;
+  color: $disabled-text-dark;
 }
 
 .tips {
-  color: #8560A9;
+  color: $primary;
   font-size: 0.7rem;
 }
 
 .tag {
   display: inline-block;
-  color: #FFFFFF;
+  color: $white;
   padding: 0.2rem 0.5rem;
   margin: 0.3rem;
   border-radius: 1rem;
 }
 
 .selected {
-  background-color: #E5F7A9;
+  background-color: $complement-light;
   color: $primary-dark;
 }

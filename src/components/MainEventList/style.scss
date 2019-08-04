@@ -5,12 +5,11 @@
 .emptyPanel {
     padding-top: 8.6rem;
     text-align: center;
-    color: #BABABA;
-}
-
-.emptyPanel svg {
-    width: 4.3rem;
-    fill: #D3C1E5;
+    color: $disabled-text-light;
+    :global(.icon-no-activity){
+        font-size: 4.3rem;
+        color: $primary-light;
+    }
 }
 
 .footer {

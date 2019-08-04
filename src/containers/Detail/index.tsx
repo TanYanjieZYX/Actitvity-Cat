@@ -199,7 +199,7 @@ class Detail extends React.Component<IProps, IState> {
       return (
         <div className={style.bottom_comment}>
           <div className={style.comment}>
-            <span className='iconfont icon-comment-single' onClick={this.toggleComment}></span>
+            <span className='iconfont icon-cross' onClick={this.toggleComment}></span>
             <input
               type='text'
               className={style.input}

@@ -5,6 +5,13 @@
 [后端项目](https://git.garena.com/jinyang.li/pangolier)<br/>
 [后端 API 设计文档](https://docs.google.com/document/d/1G7M8M5JQzfZjGeHD7mrzDk2-M_NaR8RsBndFxs8DIEw/edit?usp=sharing)<br/>
 
+## 项目架构选型
+
+* 框架——react + react-router + redux + redux-saga + typescript
+* 模块打包工具——webpack4
+* 语法检测——standard+eslint+prettier
+* 样式预处理——sass、css-module
+* 开发使用——redux-logger、redux-devtools-extension
 ## 项目启动
 启动本项目之前，先启动 [pangolier](https://git.garena.com/jinyang.li/pangolier) 项目：
 
@@ -33,7 +40,7 @@ npm start
 ```
 注意配置跨域，需要和后端请求的地址一致
 
-依赖安装完成之后，更改 `API_HOST` 改为如下值：
+依赖安装完成之后，更改 `baseURL` 改为如下值：
 
 ```js
 // src/utils/api.ts
@@ -105,19 +112,24 @@ src
 >color.scss
 
 ```scss
-$primary: #8560a9;
-$primary-neutral: #67616d;
-$primary-light: #d3c1e5;
+$primary: #8560A9;
+$primary-neutral: #67616D;
+$primary-light: #D3C1E5;
 $primary-dark: #453257;
-$background: #faf9fc;
+$background: #FAF9FC;
+$primary-medium: #AC8EC9;
 
-$complement: #d5ef7f;
-$complement-dark1: #aecb4f;
-$complement-dark2: #788c36;
-$complement-light: #e5f7a9;
+$complement: #D5EF7F;
+$complement-dark1: #AECB4F;
+$complement-dark2: #788C36;
+$complement-light: #E5F7A9;
 
-$disabled-text-light: #bababa;
-$disabled-text-dark: #666;
+$disabled-text-light: #BABABA;
+$disabled-text-medium: #8C8C8C;
+$disabled-text-dark: #666666;
+$white: #FFFFFF;
+$red: #FF5C5C;
+$border-light: #E8E8E8;
 ```
 
 #### font 字体
@@ -128,7 +140,7 @@ $disabled-text-dark: #666;
 
 ### 设计稿尺寸转换、CSS Module
 样式使用了css-modules、SCSS。通过rem来实现响应式布局，根据根元素宽度决定其font-size大小。使该应用能在不同尺寸的手机屏幕上正常显示。
-```
+```js
 const setRem = () => {
   const html = document.getElementsByTagName('html')[0]
   const width = html.getBoundingClientRect().width
@@ -148,7 +160,7 @@ const setRem = () => {
 
 ### 登录权限校验
 #### 路由配置
-```
+```js
         <Switch>
           <Route path='/' exact component={Login} />
           <PrivateRoute path='/main/' component={Main} />
@@ -159,7 +171,7 @@ const setRem = () => {
 ```
 #### 路由组件限制
 使用`PrivateRoute`封装了登录检验逻辑，没有登录（store中无对应token信息）的用户无法访问`PrivateRoute`，会重定向至登录页
-```
+```js
 const PrivateRoute = ({ component: Component, user, ...rest }) => (
   <Route
     {...rest}
@@ -183,12 +195,28 @@ const PrivateRoute = ({ component: Component, user, ...rest }) => (
 TODO: 虚拟列表
 
 ### i18n 多国语言
+原理其实很简单： 字符串替换。
+拉取远程的国际化json文件到本地，再根据语言做一个映射就可以了。
 #### 方法一
 登录页可选择切换英语、中文、日本语。实现的方案是在lang中配置对应的语言文件
 根据选择的语言require对应的配置文件，并通过键值对引入对应的值展示。默认语言为英语，点选切换后将语言的缩写存储在localstorge中，再次访问时显示上次选择的语言。
 #### 方法二
 使用i18n-react
 
+初始化
+```js
+i18next.init({
+  lng: 'en',
+});
+```
+切换系统语言
+```js
+import { changeLanguage } from '@src/i18n';
 
+  // ...
 
+  // 设置为印尼语
+  changeLanguage('id');
+```
+为了保存语言设置, 可以把 language 保存在 localStorage 中, 使用的时候直接从 storage 里取。
 ### 项目截图
