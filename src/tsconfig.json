@@ -14,14 +14,14 @@
     "baseUrl": ".",
     "paths": {
       "@act/*": ["src/actions/*"],
-      "@api/*": ["./src/api/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@imgs/*": ["./src/assets/imgs/*"],
+      "@api/*": ["src/api/*"],
+      "@assets/*": ["src/assets/*"],
+      "@imgs/*": ["src/assets/imgs/*"],
       "@comp/*": ["src/components/*"],
       "@container/*": ["src/containers/*"],
       "@lang/*": ["src/lang/*"],
       "@reducer/*": ["src/reducers/*"],
-      "@sagas/*": ["./src/sagas/*"],
+      "@sagas/*": ["src/sagas/*"],
       "@scss/*": ["src/scss/*"],
       "@utils/*": ["src/utils/*"],
       "@src/*": ["src/*"]
