@@ -1,0 +1,20 @@
+.main,
+.emptyPanel {
+    padding-top: 0.5rem;
+}
+.emptyPanel {
+    padding-top: 8.6rem;
+    text-align: center;
+    color: $disabled-text-light;
+    :global(.icon-no-activity){
+        font-size: 4.3rem;
+        color: $primary-light;
+    }
+}
+
+.footer {
+    position: relative;
+    height: 3px;
+    width: 100vw;
+    bottom:50vh;
+}

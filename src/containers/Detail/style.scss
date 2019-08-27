@@ -1,0 +1,110 @@
+.main {
+  height: calc(100vh - 4rem - 2.9rem);
+  overflow-y: scroll;
+}
+
+.bottom_comment,
+.bottom_normal {
+  position: fixed;
+  width: 100vw;
+  height: 4rem;
+  line-height: 4rem;
+  bottom: 0;
+  display: grid;
+  text-align: center;
+  grid-template-columns: 80% 20%;
+}
+
+.comment {
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+
+  :global(.icon-cross) {
+    font-size: 1.5rem;
+    color: $complement;
+  }
+}
+
+.send {
+  background-color: $complement;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  :global(.icon-send) {
+    font-size: 2rem;
+    color: $primary;
+  }
+}
+
+.input {
+  background-color: $white;
+  height: 2.3rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  color: $primary-dark;
+  font-size: 1rem;
+}
+
+.input::-webkit-input-placeholder {
+  color: $primary-light;
+  font-size: 1rem;
+}
+
+.bottom_normal {
+  grid-template-columns: 56% 44%;
+
+  :global(.iconfont) {
+    font-size: 1.7rem;
+    color: $primary-dark;
+  }
+}
+
+.purple {
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.bottom_normal .likes_active {
+  fill: $complement;
+}
+
+.join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $complement;
+  color: $complement-dark2;
+
+  :global(.iconfont) {
+    color: $complement-dark2;
+    padding-right: 1rem;
+  }
+}
+
+.join_active {
+  color: $primary;
+
+  :global(.iconfont) {
+    color: $primary;
+  }
+}
+
+.toast {
+  overflow: hidden;
+  line-height: 2.3rem;
+  text-align: center;
+  background-color: rgba(229, 247, 169, 0.8);
+  color: $primary;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 2;
+  top: 3.2rem;
+  transition: height 0.3s;
+}

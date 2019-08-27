@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow-y: scroll;
+  transition: left 1s;
+}
+
+.cover {
+position: absolute;
+width: 100vw;
+height: 100vh;
+left: 80vw;
+z-index: 2;
+}

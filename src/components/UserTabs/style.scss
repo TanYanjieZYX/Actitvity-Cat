@@ -1,0 +1,57 @@
+.tabs {
+  height: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px $border-light solid;
+  border-bottom: 1px $border-light solid;
+  text-align: center;
+  color: $disabled-text-medium;
+  background-color: $white;
+  font-size: 0.9rem;
+
+  :global(.iconfont) {
+    font-size: 1.2rem;
+    vertical-align: sub;
+    margin-right: 0.5rem;
+    color: $disabled-text-medium;
+  }
+}
+
+.tabs>div {
+  height: 1rem;
+  line-height: 1rem;
+  flex: 1;
+}
+
+.likes {
+  padding-left: 1rem;
+  border-right: 1px $border-light solid;
+}
+
+.going {
+  border-right: 1px $border-light solid;
+}
+
+.past {
+  padding-right: 1rem;
+}
+
+.emptyPanel {
+  background-color: #FAFAFA;
+  padding-top: 5.6rem;
+  text-align: center;
+  color: $disabled-text-light;
+
+  :global(.iconfont) {
+    font-size: 4.3rem;
+    color: $primary-light;
+  }
+}
+
+.active {
+  color: $complement-dark1;
+  :global(.iconfont) {
+    color: $complement-dark1;
+  }
+}

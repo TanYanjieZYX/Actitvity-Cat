@@ -1,0 +1,84 @@
+.main {
+  background-color: $primary-dark;
+  height: 100vh;
+  position: fixed;
+  width: 80vw;
+  transition: left 1s;
+}
+
+.date,
+.channel {
+  text-align: center;
+  margin-top: 0.7rem;
+}
+
+.date {
+  margin-bottom: 2rem;
+}
+
+.date>span,
+.channel>span {
+  color: $primary-medium;
+  font-size: 0.9rem;
+  border-bottom: 1px $primary-medium solid;
+}
+
+.date>div,
+.channel>div {
+  text-align: left;
+  margin: 1rem;
+}
+
+
+.button {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4.9rem;
+  text-align: center;
+  background-color: $complement;
+  box-sizing: border-box;
+  padding: 1.2rem;
+}
+
+.button span {
+  color: $primary-dark;
+  font-size: 1.1rem;
+  font-weight: $semibold;
+  vertical-align: top;
+  padding-left: 0.5rem;
+
+  :global(.icon-search) {
+    font-size: 1.3rem;
+  }
+}
+
+.disabled {
+  background-color: $disabled-text-light;
+
+  :global(.icon-search) {
+    color: $disabled-text-dark;
+  }
+}
+
+.disabled span {
+  color: $disabled-text-dark;
+}
+
+.tips {
+  color: $primary;
+  font-size: 0.7rem;
+}
+
+.tag {
+  display: inline-block;
+  color: $white;
+  padding: 0.2rem 0.5rem;
+  margin: 0.3rem;
+  border-radius: 1rem;
+}
+
+.selected {
+  background-color: $complement-light;
+  color: $primary-dark;
+}

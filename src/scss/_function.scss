@@ -1,0 +1,70 @@
+/* 字号大小 用在rem单位*/
+$font-size:16px !default;
+
+/* 设计稿宽度尺寸  用在vw单位,请按照设计稿给出的页面宽度尺寸填写*/
+$base-size: 320 !default;
+$unit:false !default; //单位是否转换为rem，false输出vw单位
+$unit-max: 2 !default; //默认属性值转换后保留两位小数
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function power($num) {
+  $value: 10;
+  @if ($num > 0) {
+    @for $i from 1 to $num {
+      $value: $value * 10
+    }
+  }
+  @else if($num==0) {
+    $value: 1;
+  }
+  @else {
+    @warn "$num值必须大于等于0"
+  }
+  @return $value;
+}
+
+@function decimal($value) {
+  @return round($value * power($unit-max)) / power($unit-max);
+}
+
+@function tounit($values, $unitn:'') {
+  $val: '';
+  $list: ();
+  $unito: '';
+  $unitVw: strip-unit($base-size) / 100;
+  @each $value in $values {
+    @if (type-of($value)==number) {
+      @if (unitless($value)) or (unit($value)=='px') {
+        @if $unit {
+          $unito: rem;
+          $val: decimal(strip-unit($value) / strip-unit($font-size));
+        }
+        @else {
+          $unito: vw;
+          $val: decimal(strip-unit($value) / strip-unit($unitVw));
+        }
+        @if($unitn=='rem') {
+          $unito: rem;
+          $val: decimal(strip-unit($value) / strip-unit($font-size));
+        }
+        @else if($unitn=='vw') {
+          $unito: vw;
+          $val: decimal(strip-unit($value) / strip-unit($unitVw));
+        }
+        @else {
+          $unitn: $unit
+        }
+        $list: append($list, $val)#{$unito};
+      }
+      @else {
+        $list: append($list, $value);
+      }
+    }
+    @else {
+      $list: append($list, $value);
+    }
+  }
+  @return $list();
+}

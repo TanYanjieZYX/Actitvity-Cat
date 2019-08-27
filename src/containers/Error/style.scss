@@ -1,0 +1,22 @@
+.errorBox {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  img{
+    width: 20rem;
+    height: 20rem;
+    margin-top: 7.5rem;
+  }
+  .errorMsg{
+      word-break: keep-all;
+      font-weight: $regular; 
+      margin-top: 2rem;
+      color:$primary;
+    .a{
+        text-decoration: none;
+        color: $primary;
+    }
+  }
+  
+}

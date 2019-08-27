@@ -1,0 +1,96 @@
+.main {
+  margin: 1rem 1.5rem 0 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px $border-light solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top {
+  font-size: 0.9rem;
+}
+
+.top img {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 1rem;
+}
+
+.top span {
+  color: $primary-neutral;
+  vertical-align: top;
+  padding-left: 0.7rem;
+}
+
+.channel {
+  float: right;
+  color: $primary;
+  padding: 0.1rem 0.6rem;
+  border: 1px $primary-light solid;
+  border-radius: 0.8rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: $semibold;
+  color: $primary-dark;
+  padding: 0.6rem 0;
+}
+.time{
+  display: flex;
+}
+.time :global(.icon-time) {
+  margin-right:0.5rem;
+  font-size: 0.9rem;
+  color: $primary;
+}
+
+.time span {
+  font-size: 0.7rem;
+  color: $primary;
+  vertical-align: top; 
+}
+
+.description {
+  color: $primary-neutral;
+  margin: 0.9rem 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+
+  :global(.iconfont) {
+    color: $primary-medium;
+    font-size: 0.9rem;
+    margin-right: 0.4rem;
+  }
+}
+
+.bottom span {
+  color: $primary-medium;
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.bottom>span:first-child {
+  margin-right: 2.2rem;
+}
+
+.activeGoing :global(.iconfont) {
+  color: $complement-dark1;
+}
+
+.activeGoing span {
+  color: $primary-dark;
+}
+
+.activeLike :global(.iconfont) {
+  color: $red;
+}
+
+.activeLike span {
+  color: $primary-dark;
+}

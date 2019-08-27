@@ -1,0 +1,27 @@
+.main {
+  padding: 0 1.5rem;
+}
+
+.going,
+.likes {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-bottom: $border-light 1px solid;
+  padding-top: 1rem;
+}
+
+.left {
+  color: $primary-medium;
+
+  :global(.iconfont) {
+    color: $primary-medium;
+    font-size: 0.9rem;
+  }
+}
+
+.right img {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 1rem;
+  margin: 0 0.3rem 0.3rem 0.3rem;
+}
