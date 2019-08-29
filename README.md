@@ -220,3 +220,20 @@ import { changeLanguage } from '@src/i18n';
 ```
 为了保存语言设置, 可以把 language 保存在 localStorage 中, 使用的时候直接从 storage 里取。
 ### 项目截图
+#### 登录页面
+<img src="pic/1.png" width = "300" height = "500" alt="登录页面" />
+#### 活动列表页面
+<img src="pic/2.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/3.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/10.png" width = "300" height = "500" alt="登录页面" />
+#### 筛选结果页面
+<img src="pic/11.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/12.png" width = "300" height = "500" alt="登录页面" />
+#### 活动详情页面
+<img src="pic/5.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/6.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/7.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/8.png" width = "300" height = "500" alt="登录页面" />
+#### 用户详情页面
+<img src="pic/4.png" width = "300" height = "500" alt="登录页面" />
+<img src="pic/9.png" width = "300" height = "500" alt="登录页面" />
