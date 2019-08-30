@@ -36,7 +36,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware, logger)))
 
 if (process.env.NODE_ENV === 'production') {
-  axios.defaults.baseURL = 'https://localhost:8080/'
+  axios.defaults.baseURL = 'https://localhost:5005/'
 }
 
 ReactDOM.render(

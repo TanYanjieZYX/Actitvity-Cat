@@ -95,6 +95,7 @@
   "author": "yanjie.tan",
   "scripts": {
     "start": "node scripts/start.js",
+    "pm2": "pm2 start scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "standard-fix": "standard --fix",
@@ -126,7 +127,6 @@
     "typescript": "3.4.5",
     "typescript-eslint-parser": "22.0.0"
   },
-  "proxy": "http://localhost:8080/api/v1",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
@@ -176,5 +176,6 @@
     "presets": [
       "react-app"
     ]
-  }
+  },
+  "proxy": "http://localhost:5005/api/v1"
 }
