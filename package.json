@@ -177,5 +177,5 @@
       "react-app"
     ]
   },
-  "proxy": "http://localhost:5005/api/v1"
+  "proxy": "http://localhost:5005"
 }
